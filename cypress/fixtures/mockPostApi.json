@@ -4,5 +4,5 @@
   "start_date": "start date",
   "end_date": "end date",
   "location": "location",
-  "type": "type"
+  "listing_type": "listing type"
 }

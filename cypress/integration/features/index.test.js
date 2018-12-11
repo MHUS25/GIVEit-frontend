@@ -7,5 +7,6 @@ describe('Index', function() {
     cy.get('#location').type('location')
     cy.get('#start_date').type('start_date')
     cy.get('#end_date').type('end_date')
+    cy.contains("submit").click()
   })
 })

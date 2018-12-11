@@ -9,11 +9,11 @@ class App extends Component {
         <header className="App-header">
         <form id='request'>
           Title:
-          <input type='text' id='title' value='title'/>
-          <input type='body' id='body' value='body'/>
-          <input type='location' id='location' value='location'/>
-          <input type='start_date' id='start_date' value='start_date'/>
-          <input type='end_date' id='end_date' value='end_date'/>
+          <input type='text' id='title' placeholder='title'/>
+          <input type='body' id='body'placeholder='body'/>
+          <input type='location' id='location' placeholder='location'/>
+          <input type='start_date' id='start_date' placeholder='start_date'/>
+          <input type='end_date' id='end_date' placeholder='end_date'/>
         </form>
         </header>
       </div>

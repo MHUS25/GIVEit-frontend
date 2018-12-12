@@ -1,8 +1,8 @@
-import React, { Componet } from 'react';
+import React, { Component } from 'react';
 import FormListings from './FormListings';
 import TableListings from './TableListings';
 
-class App extends React.Component {
+class App extends Component {
   state = {
     listings: []
   };

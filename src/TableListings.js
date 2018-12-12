@@ -7,7 +7,9 @@ class TableListings extends Component {
     return (
       <table>
         <TableHeader />
-        <TableBody listings={listings} />
+        <TableBody
+          listings={listings}
+         />
       </table>
     );
   }
@@ -42,7 +44,7 @@ const TableBody = props => {
       </tr>
     );
   });
-  
+
   return <tbody>{rows}</tbody>;
 
 };

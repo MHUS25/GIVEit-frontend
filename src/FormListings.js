@@ -5,12 +5,12 @@ class FormListings extends Component {
     super(props);
 
     this.initialState = {
-      title: "",
-      description: "",
-      start_date: "",
-      end_date: "",
-      listing_type: "",
-      location: ""
+      title: '',
+      description: '',
+      start_date: '',
+      end_date: '',
+      listing_type: '',
+      location: ''
     };
 
     this.state = this.initialState;
@@ -27,7 +27,7 @@ class FormListings extends Component {
     this.setState({
       [name]: value
     });
-  };
+  }
 
   render() {
     const {

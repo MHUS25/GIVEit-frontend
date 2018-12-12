@@ -16,7 +16,8 @@ class FormListings extends Component {
     this.state = this.initialState;
   }
 
-  submitForm = () => {
+  submitForm = (ev) => {
+    if(ev && ev.preventDefault) { ev.preventDefault() };
     this.props.handleSubmit(this.state);
     this.setState(this.initialState)
   }

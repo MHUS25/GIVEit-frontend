@@ -37,6 +37,7 @@ const TableBody = props => {
     return (
       <tr key={index}>
         <td>{row.title}</td>
+        <td>{row.description}</td>
         <td>{row.start_date}</td>
         <td>{row.end_date}</td>
         <td>{row.listing_type}</td>

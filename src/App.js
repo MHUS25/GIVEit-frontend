@@ -7,14 +7,18 @@ class App extends React.Component {
     listings: []
   };
 
+  handleSubmit = listing => {
+    this.setState({listings: [...this.state.listings, listing]});
+  }
+
 
   render () {
     return (
       <div className="app">
-        <FormListings />
         <TableListings
           listings={this.state.listings}
           />
+        <FormListings handleSubmit={this.handleSubmit}/>
       </div>
     );
   }

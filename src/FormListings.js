@@ -16,6 +16,11 @@ class FormListings extends Component {
     this.state = this.initialState;
   }
 
+  submitForm = () => {
+    this.props.handleSubmit(this.state);
+    this.setState(this.initialState)
+  }
+
   handleChange = event => {
     const { name, value } = event.target;
 

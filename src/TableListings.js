@@ -28,7 +28,7 @@ const TableHeader = () => {
       </tr>
     </thead>
   );
-};
+}
 
 const TableBody = props => {
   const rows = props.listings.map((row, index) => {
@@ -42,6 +42,7 @@ const TableBody = props => {
       </tr>
     );
   });
-  return <tbody>{rows}</tbody>;
   
+  return <tbody>{rows}</tbody>;
+
 };

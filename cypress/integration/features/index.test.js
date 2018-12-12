@@ -35,13 +35,20 @@ describe("Index", function() {
   });
   it("should list all the listings", function() {
     cy.visit("/");
-    cy.get("listing_table").within(() => {
-      cy.contains("Help Needed");
-      cy.contains("Help Description");
-      cy.contains("June");
-      cy.contains("July");
-      cy.contains("Request");
-      cy.contains("London");
+    cy.get("form").within(() => {
+      cy.get("#title").type("Help");
+      cy.get("#description").type("Need Help");
+      cy.get("#start_date").type("June");
+      cy.get("#end_date").type("July");
+      cy.get("#listing_type").type("Request");
+      cy.get("#location").type("London");
+      cy.contains("submit").click();
     });
+    cy.contains("Help");
+    cy.contains("Need Help");
+    cy.contains("June");
+    cy.contains("July");
+    cy.contains("Request");
+    cy.contains("London");
   });
 });

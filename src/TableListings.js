@@ -2,14 +2,13 @@ import React, { Component } from "react";
 
 class TableListings extends Component {
   render() {
-    const { listings } = this.props;
+    const { listings, removeList } = this.props;
 
     return (
       <table>
         <TableHeader />
-        <TableBody
-          listings={listings}
-         />
+        <TableBody listings={listings}
+          removeList={removeList} />
       </table>
     );
   }
@@ -30,7 +29,7 @@ const TableHeader = () => {
       </tr>
     </thead>
   );
-}
+};
 
 const TableBody = props => {
   const rows = props.listings.map((row, index) => {
@@ -42,10 +41,12 @@ const TableBody = props => {
         <td>{row.end_date}</td>
         <td>{row.listing_type}</td>
         <td>{row.location}</td>
+        <td>
+          <button onClick={() => props.removeList(index)}>Delete</button>
+        </td>
       </tr>
     );
   });
 
   return <tbody>{rows}</tbody>;
-
 };

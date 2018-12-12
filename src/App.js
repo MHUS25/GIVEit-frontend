@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import FormListings from './FormListings';
-import TableListings from './TableListings';
+import React, { Component } from "react";
+import FormListings from "./FormListings";
+import TableListings from "./TableListings";
 
 class App extends Component {
   state = {
@@ -8,17 +8,27 @@ class App extends Component {
   };
 
   handleSubmit = listing => {
-    this.setState({listings: [...this.state.listings, listing]});
-  }
+    this.setState({ listings: [...this.state.listings, listing] });
+  };
 
+  removeList = index => {
+    const { listings } = this.state;
 
-  render () {
+    this.setState({
+      listings: listings.filter((listing, i) => {
+        return i !== index;
+      })
+    });
+  };
+
+  render() {
     return (
       <div className="app">
         <TableListings
           listings={this.state.listings}
+          removeList={this.removeList}
         />
-        <FormListings handleSubmit={this.handleSubmit}/>
+        <FormListings handleSubmit={this.handleSubmit} />
       </div>
     );
   }

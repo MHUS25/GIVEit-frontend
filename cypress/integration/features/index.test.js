@@ -51,4 +51,20 @@ describe("Index", function() {
     cy.contains("Request");
     cy.contains("London");
   });
+
+  it('should delete listing' function(){
+    cy.visit("/");
+    cy.get("form").within(() => {
+      cy.get("#title").type("Help");
+      cy.get("#description").type("Need Help");
+      cy.get("#start_date").type("June");
+      cy.get("#end_date").type("July");
+      cy.get("#listing_type").type("Request");
+      cy.get("#location").type("London");
+      cy.contains("submit").click();
+    });
+    cy.contains("delete").click();
+    cy.get()
+
+  })
 });

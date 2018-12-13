@@ -9,6 +9,7 @@ script:
  - cypress install
  - yarn start & wait-on http://localhost:3001
  - yarn cypress run
+ - yarn add surge
 deploy:
   provider: surge
   project: ./build/

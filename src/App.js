@@ -1,28 +1,24 @@
 import React, { Component } from "react";
 import FormListings from "./FormListings";
 import TableListings from "./TableListings";
-import jQuery from "jquery";
+
 
 class App extends Component {
-  constructor (props) {
-    super(props);
-    this.state = {
-      listings: []
-    }
-  }
+  state = {
+    listings: []
+  };
 
   componentDidMount() {
-    console.log('TESTING')
-    jQuery.ajax({
-      type: "GET",
-      url: 'https://giveit-backend.herokuapp.com/listings'
-    }).done(data => {
-      console.log(data);
-      this.setState({listings: data});
-    });
+    const url = 'https://giveit-backend.herokuapp.com/listings';
+
+    fetch(url)
+      .then(result => result.json())
+      .then(result => {
+        this.setState({
+          listings: result
+        })
+      });
   }
-
-
 
   handleSubmit = listing => {
     this.setState({ listings: [...this.state.listings, listing] });
@@ -39,6 +35,7 @@ class App extends Component {
   };
 
   render() {
+
     return (
       <div className="app">
         <TableListings

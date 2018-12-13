@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import FormListings from "./FormListings";
 import TableListings from "./TableListings";
+import jQuery from "jquery";
 
 class App extends Component {
   state = {
@@ -20,6 +21,10 @@ class App extends Component {
       })
     });
   };
+
+  componentDidMount() {
+
+  }
 
   render() {
     return (

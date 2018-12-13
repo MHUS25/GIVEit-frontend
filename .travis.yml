@@ -1,6 +1,5 @@
+sudo: false
 language: node_js
-node_js:
- - yarn
 cache:
   yarn: true
  directories:

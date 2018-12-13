@@ -15,14 +15,12 @@ class App extends Component {
     console.log('TESTING')
     jQuery.ajax({
       type: "GET",
-      url: 'http://localhost:3001/listings'
+      url: 'https://giveit-backend.herokuapp.com/listings'
     }).done(data => {
       console.log(data);
       this.setState({listings: data});
     });
   }
-
-
 
   state = {
     listings: []

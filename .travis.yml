@@ -8,7 +8,7 @@ install:
 before_script:
   -yarn
 script:
-  - $(npm bin)/cypress run --record
+  - yarn cypress:open
 deploy:
  provider: pages
  skip_cleanup: true

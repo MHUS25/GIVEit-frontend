@@ -22,6 +22,19 @@ class App extends Component {
 
   handleSubmit = listing => {
     this.setState({ listings: [...this.state.listings, listing] });
+    fetch('https://giveit-backend.herokuapp.com/listings', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        listing
+      }),
+    }).then((response) => response.json())
+      .then((responseJson) => {
+        return responseJson.listing;
+      })
   };
 
   removeList = index => {
@@ -32,6 +45,9 @@ class App extends Component {
         return i !== index;
       })
     });
+    return fetch('https://giveit-backend.herokuapp.com/listings/' + index, {
+      method: 'DELETE',
+    }).then(response => response.json());
   };
 
   render() {

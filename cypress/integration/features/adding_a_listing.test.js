@@ -1,5 +1,5 @@
 describe('Creating a listing', function () {
-  it ('has a form', function() {
+  it ('has a form which can be filled', function() {
     cy.visit('/')
     cy.get('#title').type('Test title')
     cy.get('#description').type('Test description')

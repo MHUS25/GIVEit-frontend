@@ -1,16 +1,9 @@
-sudo: false
 language: node_js
+node_js:
+ - "stable"
 cache:
-  yarn: true
  directories:
  - node_modules
-install:
 script:
-  - yarn cypress:open
-deploy:
- provider: pages
- skip_cleanup: true
- github_token: ec58741fc9b5bbc9354ef7a712a4929f5b17d4b2
- local_dir: build
- on:
-   branch: master
+ - npm test
+ - npm run build

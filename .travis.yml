@@ -5,12 +5,13 @@ cache:
  directories:
  - node_modules
 script:
- - yarn
- - yarn test
+ - yarn run build
+ - cypress install
+ - yarn start & wait-on http://localhost:3001
+ - yarn cypress run
+ - yarn add surge
 deploy:
- provider: pages
- skip_cleanup: true
- github_token: ec58741fc9b5bbc9354ef7a712a4929f5b17d4b2
- local_dir: build
- on:
-   branch: master
+  provider: surge
+  project: ./build/
+  domain: giveit.surge.sh
+  skip_cleanup: true

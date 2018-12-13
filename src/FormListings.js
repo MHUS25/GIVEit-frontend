@@ -44,7 +44,7 @@ class FormListings extends Component {
 
        <button onClick={ (e) => {
          this.handleFormSumbit(formFields.title.value, formFields.description.value, formFields.start_date.value, formFields.end_date.value, formFields.listing_type.value, formFields.location.value)
-       }}>Submit</button>
+       }} id="submit">Submit</button>
      </form>
    )
  }

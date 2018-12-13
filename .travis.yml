@@ -7,7 +7,7 @@ cache:
 script:
  - yarn run build
  - cypress install
- - yarn start & wait-on http://localhost:3001
+ - yarn start & wait-on http://localhost:3000
  - yarn cypress run
  - yarn add surge
 deploy:

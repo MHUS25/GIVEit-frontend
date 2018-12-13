@@ -1,11 +1,28 @@
 import React, { Component } from "react";
 import FormListings from "./FormListings";
 import TableListings from "./TableListings";
+import jQuery from "jquery";
 
 class App extends Component {
-  state = {
-    listings: []
-  };
+  constructor (props) {
+    super(props);
+    this.state = {
+      listings: []
+    }
+  }
+
+  componentDidMount() {
+    console.log('TESTING')
+    jQuery.ajax({
+      type: "GET",
+      url: 'https://giveit-backend.herokuapp.com/listings'
+    }).done(data => {
+      console.log(data);
+      this.setState({listings: data});
+    });
+  }
+
+
 
   handleSubmit = listing => {
     this.setState({ listings: [...this.state.listings, listing] });

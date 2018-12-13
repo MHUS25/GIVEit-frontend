@@ -15,90 +15,39 @@ class FormListings extends Component {
 
     this.state = this.initialState;
   }
-
   submitForm = (ev) => {
     if(ev && ev.preventDefault) { ev.preventDefault() };
     this.props.handleSubmit(this.state);
-    this.setState(this.initialState)
-  }
+    this.setState(this.initialState);}
 
-  handleChange = event => {
-    const { name, value } = event.target;
-
-    this.setState({
-      [name]: value
-    });
-  }
-
+  handleFormSumbit(title, description, start_date, end_date, listing_type, location) {
+   this.submitForm();
+   let body = JSON.stringify({listing: {title: title, description: description, start_date: start_date, end_date: end_date, listing_type: listing_type, location: location}})
+   fetch('https://giveit-backend.herokuapp.com/listings' , {
+     method: 'POST',
+     headers: {
+       'Content-Type': 'application/json'
+     },
+     body: body,
+   })
+ }
   render() {
-    const {
-      title,
-      description,
-      start_date,
-      end_date,
-      listing_type,
-      location
-    } = this.state;
+   let formFields = {}
+   return(
+     <form>
+       <input placeholder="Enter title" id="title" ref={input => formFields.title = input} type="text"/><br/>
+       <input placeholder="Enter description" id="description" ref={input => formFields.description = input} type="text"/><br/>
+       <input placeholder="Enter start_date" id="start_date" ref={input => formFields.start_date = input} type="text"/><br/>
+       <input placeholder="Enter end_date" id="end_date" ref={input => formFields.end_date = input} type="text"/><br/>
+       <input placeholder="Enter listing_type" id="listing_type" ref={input => formFields.listing_type = input} type="text"/><br/>
+       <input placeholder="Enter location" id="location" ref={input => formFields.location = input} type="text"/><br/>
 
-    return (
-      <form>
-        <label>Title</label>
-        <input
-          type="text"
-          id="title"
-          name="title"
-          value={title}
-          onChange={this.handleChange}
-        />
-        <label>Description</label>
-        <input
-          type="text"
-          id="description"
-          name="description"
-          value={description}
-          onChange={this.handleChange}
-        />
-        <label>Start Date</label>
-        <input
-          type="text"
-          id="start_date"
-          name="start_date"
-          value={start_date}
-          onChange={this.handleChange}
-        />
-        <label>End Date</label>
-        <input
-          type="text"
-          id="end_date"
-          name="end_date"
-          value={end_date}
-          onChange={this.handleChange}
-        />
-        <label>Listing Type</label>
-        <input
-          type="text"
-          id="listing_type"
-          name="listing_type"
-          value={listing_type}
-          onChange={this.handleChange}
-        />
-        <label>Location</label>
-        <input
-          type="text"
-          id="location"
-          name="location"
-          value={location}
-          onChange={this.handleChange}
-        />
-        <input
-          type="submit"
-          id="submit"
-          value="submit"
-          onClick={this.submitForm}
-        />
-      </form>
-    );
-  }
+       <button onClick={ (e) => {
+         this.handleFormSumbit(formFields.title.value, formFields.description.value, formFields.start_date.value, formFields.end_date.value, formFields.listing_type.value, formFields.location.value)
+       }}>Submit</button>
+     </form>
+   )
+ }
 }
 
 export default FormListings;

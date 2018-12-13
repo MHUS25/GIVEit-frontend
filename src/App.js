@@ -4,6 +4,26 @@ import TableListings from "./TableListings";
 import jQuery from "jquery";
 
 class App extends Component {
+  constructor (props) {
+    super(props);
+    this.state = {
+      listings: []
+    }
+  }
+
+  componentDidMount() {
+    console.log('TESTING')
+    jQuery.ajax({
+      type: "GET",
+      url: 'http://localhost:3001/listings'
+    }).done(data => {
+      console.log(data);
+      this.setState({listings: data});
+    });
+  }
+
+
+
   state = {
     listings: []
   };
@@ -21,10 +41,6 @@ class App extends Component {
       })
     });
   };
-
-  componentDidMount() {
-
-  }
 
   render() {
     return (

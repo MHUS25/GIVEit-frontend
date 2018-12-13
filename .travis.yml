@@ -18,4 +18,4 @@ deploy:
   on:
     branches:
       only:
-        - master
+        - surge

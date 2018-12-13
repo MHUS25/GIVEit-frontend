@@ -6,7 +6,7 @@ cache:
  - node_modules
 install:
 before_script:
-  -yarn
+  - yarn
 script:
   - yarn cypress:open
 deploy:

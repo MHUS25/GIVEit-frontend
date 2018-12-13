@@ -16,4 +16,6 @@ deploy:
   domain: giveit.surge.sh
   skip_cleanup: true
   on:
-    branch: master
+    branches:
+      only:
+        - master

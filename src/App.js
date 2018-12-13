@@ -22,10 +22,6 @@ class App extends Component {
     });
   }
 
-  state = {
-    listings: []
-  };
-
   handleSubmit = listing => {
     this.setState({ listings: [...this.state.listings, listing] });
   };

@@ -45,7 +45,7 @@ class App extends Component {
         return i !== index;
       })
     });
-    return fetch(`http://giveit-backend.herokuapp.com/listings/${index}`, {
+    return fetch(`https://giveit-backend.herokuapp.com/listings/${index}`, {
       method: 'DELETE',
       headers: {
         Accept: 'application/json',

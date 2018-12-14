@@ -39,9 +39,18 @@ class App extends Component {
 
   removeList = index => {
     const { listings } = this.state;
-    
+
+    this.setState({
+      listings: listings.filter((listing, i) => {
+        return i !== index;
+      })
+    });
     return fetch(`http://giveit-backend.herokuapp.com/listings/${index}`, {
       method: 'DELETE',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
     }).then(response => response.json());
   };
 

@@ -32,9 +32,9 @@ const TableHeader = () => {
 };
 
 const TableBody = props => {
-  const rows = props.listings.map((row) => {
+  const rows = props.listings.map((row, index) => {
     return (
-      <tr key={row.id}>
+      <tr key={index}>
         <td>{row.title}</td>
         <td>{row.description}</td>
         <td>{row.start_date}</td>

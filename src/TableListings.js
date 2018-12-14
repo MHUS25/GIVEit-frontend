@@ -42,7 +42,7 @@ const TableBody = props => {
         <td>{row.listing_type}</td>
         <td>{row.location}</td>
         <td>
-          <button onClick={() => props.removeList(row.id)}>Delete</button>
+          <button onClick={() => props.removeList(row.id, index)}>Delete</button>
         </td>
       </tr>
     );

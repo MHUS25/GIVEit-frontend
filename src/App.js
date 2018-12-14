@@ -37,7 +37,7 @@ class App extends Component {
       })
   };
 
-  removeList = index => {
+  removeList = (rowId, index) => {
     const { listings } = this.state;
 
     this.setState({
@@ -45,7 +45,7 @@ class App extends Component {
         return i !== index;
       })
     });
-    return fetch(`https://cors-anywhere.herokuapp.com/https://giveit-backend.herokuapp.com/listings/${index}`, {
+    return fetch(`https://cors-anywhere.herokuapp.com/https://giveit-backend.herokuapp.com/listings/${rowId}`, {
       method: 'DELETE',
       headers: {
         'Origin': 'x-requested-with'

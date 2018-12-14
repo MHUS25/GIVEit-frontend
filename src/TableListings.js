@@ -32,9 +32,9 @@ const TableHeader = () => {
 };
 
 const TableBody = props => {
-  const rows = props.listings.map((row, index) => {
+  const rows = props.listings.map((row) => {
     return (
-      <tr key={index}>
+      <tr key={row.id}>
         <td>{row.title}</td>
         <td>{row.description}</td>
         <td>{row.start_date}</td>
@@ -42,7 +42,7 @@ const TableBody = props => {
         <td>{row.listing_type}</td>
         <td>{row.location}</td>
         <td>
-          <button onClick={() => props.removeList(index)}>Delete</button>
+          <button onClick={() => props.removeList(row.id)}>Delete</button>
         </td>
       </tr>
     );

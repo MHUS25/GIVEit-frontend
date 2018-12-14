@@ -1,34 +1,44 @@
 import React, { Component } from "react";
 import FormListings from "./FormListings";
 import TableListings from "./TableListings";
-import jQuery from "jquery";
+
 
 class App extends Component {
-  constructor (props) {
-    super(props);
-    this.state = {
-      listings: []
-    }
-  }
+  state = {
+    listings: []
+  };
 
   componentDidMount() {
-    console.log('TESTING')
-    jQuery.ajax({
-      type: "GET",
-      url: 'https://giveit-backend.herokuapp.com/listings'
-    }).done(data => {
-      console.log(data);
-      this.setState({listings: data});
-    });
+    const url = 'https://giveit-backend.herokuapp.com/listings';
+
+    fetch(url)
+      .then(result => result.json())
+      .then(result => {
+        this.setState({
+          listings: result
+        })
+      });
   }
-
-
 
   handleSubmit = listing => {
     this.setState({ listings: [...this.state.listings, listing] });
+    fetch('https://giveit-backend.herokuapp.com/listings', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        listing
+      }),
+    }).then((response) => response.json())
+      .then((responseJson) => {
+        return responseJson.listing;
+      })
   };
 
   removeList = index => {
+    console.log(index)
     const { listings } = this.state;
 
     this.setState({
@@ -36,9 +46,17 @@ class App extends Component {
         return i !== index;
       })
     });
+    return fetch(`https://giveit-backend.herokuapp.com/listings/${index}`, {
+      method: "DELETE",
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+    }).then(response => response.json());
   };
 
   render() {
+
     return (
       <div className="app">
         <TableListings

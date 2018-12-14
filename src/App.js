@@ -46,7 +46,7 @@ class App extends Component {
       })
     });
     return fetch('https://giveit-backend.herokuapp.com/listings/' + index, {
-      method: 'DELETE',
+      method: "DELETE",
     }).then(response => response.json());
   };
 

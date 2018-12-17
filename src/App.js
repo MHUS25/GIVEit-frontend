@@ -57,13 +57,20 @@ class App extends Component {
 
   getLatLng = () => {
     const { listings } = this.state;
-    console.log(listings)
-    let postcode = listings[0].location
-    fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${postcode}&key=${process.env.REACT_APP_MAPS_API_KEY}`,{
+    let location = listings[0].location
+    fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${location}&key=${process.env.REACT_APP_MAPS_API_KEY}`,{
       method: 'GET'
-
-
-    }).then(response => response.json()).then(responseJson => console.log(responseJson.results[0].geometry.location));
+    }).then(response => response.json())
+      .then((responseJson) => {
+      let myLatLng = responseJson.results[0].geometry.location;
+      let updatedListings = [...listings];
+      updatedListings.forEach((listing) => {
+        listing.latLng = myLatLng;
+      })
+      this.setState({
+        listings: updatedListings
+      });
+    });
   }
 
   render() {
@@ -75,7 +82,9 @@ class App extends Component {
           removeList={this.removeList}
         />
         <FormListings handleSubmit={this.handleSubmit} />
-        <Map/>
+        <Map
+          listings={this.state.listings}
+        />
       </div>
     );
   }

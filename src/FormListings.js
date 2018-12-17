@@ -10,7 +10,10 @@ class FormListings extends Component {
       start_date: '',
       end_date: '',
       listing_type: '',
-      location: ''
+      location: '',
+      phone_number: '',
+      email: '',
+      user_name: ''
     };
 
     this.state = this.initialState;
@@ -37,7 +40,10 @@ class FormListings extends Component {
       start_date,
       end_date,
       listing_type,
-      location
+      location,
+      phone_number,
+      email,
+      user_name
     } = this.state;
 
     return (
@@ -88,6 +94,30 @@ class FormListings extends Component {
           id="location"
           name="location"
           value={location}
+          onChange={this.handleChange}
+        />
+        <label>Phone Number</label>
+        <input
+          type="text"
+          id="phone_number"
+          name="phone_number"
+          value={phone_number}
+          onChange={this.handleChange}
+        />
+        <label>Email</label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          value={email}
+          onChange={this.handleChange}
+        />
+        <label>Postie</label>
+        <input
+          type="text"
+          id="user_name"
+          name="user_name"
+          value={user_name}
           onChange={this.handleChange}
         />
         <input

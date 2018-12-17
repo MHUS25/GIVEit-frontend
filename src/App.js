@@ -3,6 +3,16 @@ import FormListings from './FormListings'
 import TableListings from './TableListings'
 import Map from './Map'
 
+
+const loadScript = (url) => {
+  const index = window.document.getElementsByTagName('script')[0];
+  const script = window.document.createElement('script');
+  script.src = url;
+  script.async = true;
+  script.defer = true;
+  index.parentNode.insertBefore(script, index);
+};
+
 class App extends Component {
   state = {
     listings: []
@@ -20,6 +30,7 @@ class App extends Component {
       }).then(()=>{
         this.getLatLng()
       })
+
   }
 
   handleSubmit = listing => {
@@ -69,9 +80,48 @@ class App extends Component {
       })
       this.setState({
         listings: updatedListings
+      }, this.renderMap());
+    });
+  }
+
+  renderMap = () => {
+    loadScript(`https://hnryjmes-cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_MAPS_API_KEY}&callback=initMap`);
+    window.initMap = this.initMap;
+  }
+
+  initMap = () => {
+    const MAKERS_ACADEMY_POSITION = {
+      lat: 51.517352,
+      lng: -0.073267,
+    };
+
+    const myMap = new window.google.maps.Map(document.getElementById('map'), {
+      center: { lat: MAKERS_ACADEMY_POSITION.lat, lng: MAKERS_ACADEMY_POSITION.lng },
+      zoom: 15,
+    });
+
+    const infowindow = new window.google.maps.InfoWindow();
+
+    const { listings } = this.state;
+
+    listings.forEach((myListing) => {
+      const contentString = `${myListing.description}`;
+
+      const marker = new window.google.maps.Marker({
+        position: {
+          lat: myListing.latLng.lat,
+          lng: myListing.latLng.lng,
+        },
+        map: myMap,
+      });
+
+      marker.addListener('click', () => {
+        infowindow.setContent(contentString);
+        infowindow.open(myMap, marker);
       });
     });
   }
+
 
   render() {
 
@@ -82,9 +132,7 @@ class App extends Component {
           removeList={this.removeList}
         />
         <FormListings handleSubmit={this.handleSubmit} />
-        <Map
-          listings={this.state.listings}
-        />
+        <Map />
       </div>
     );
   }

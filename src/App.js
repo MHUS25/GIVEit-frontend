@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import FormListings from './FormListings'
 import TableListings from './TableListings'
 import Map from './Map'
@@ -18,7 +17,9 @@ class App extends Component {
         this.setState({
           listings: result
         })
-      });
+      }).then(()=>{
+        this.getLatLng()
+      })
   }
 
   handleSubmit = listing => {
@@ -53,6 +54,17 @@ class App extends Component {
       },
     });
   };
+
+  getLatLng = () => {
+    const { listings } = this.state;
+    console.log(listings)
+    let postcode = listings[0].location
+    fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${postcode}&key=${process.env.REACT_APP_MAPS_API_KEY}`,{
+      method: 'GET'
+
+
+    }).then(response => response.json()).then(responseJson => console.log(responseJson.results[0].geometry.location));
+  }
 
   render() {
 

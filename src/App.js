@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import FormListings from "./FormListings";
 import TableListings from "./TableListings";
+import NavBar from "./NavBar";
 
 
 class App extends Component {
@@ -57,6 +58,7 @@ class App extends Component {
 
     return (
       <div className="app">
+        <NavBar />
         <TableListings
           listings={this.state.listings}
           removeList={this.removeList}

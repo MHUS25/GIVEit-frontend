@@ -68,21 +68,22 @@ class App extends Component {
 
   getLatLng = () => {
     const { listings } = this.state;
-    let location = listings[0].location
-    fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${location}&key=${process.env.REACT_APP_MAPS_API_KEY}`,{
-      method: 'GET'
-    }).then(response => response.json())
-      .then((responseJson) => {
-      let myLatLng = responseJson.results[0].geometry.location;
-      let updatedListings = [...listings];
-      updatedListings.forEach((listing) => {
-        listing.latLng = myLatLng;
-      })
-      this.setState({
-        listings: updatedListings
-      }, this.renderMap());
-    });
+    let updatedListings = [...listings];
+    updatedListings.forEach((listing) => {
+      let location = listing.location;
+      fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${location}&key=${process.env.REACT_APP_MAPS_API_KEY}`,{
+        method: 'GET'
+      }).then(response => response.json())
+        .then((responseJson) => {
+        let myLatLng = responseJson.results[0].geometry.location;
+          listing.latLng = myLatLng;
+        });
+      });
+    this.setState({
+      listings: updatedListings
+    }, this.renderMap());
   }
+  
 
   renderMap = () => {
     loadScript(`https://hnryjmes-cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_MAPS_API_KEY}&callback=initMap`);
@@ -97,7 +98,7 @@ class App extends Component {
 
     const myMap = new window.google.maps.Map(document.getElementById('map'), {
       center: { lat: MAKERS_ACADEMY_POSITION.lat, lng: MAKERS_ACADEMY_POSITION.lng },
-      zoom: 15,
+      zoom: 13,
     });
 
     const infowindow = new window.google.maps.InfoWindow();
@@ -105,6 +106,7 @@ class App extends Component {
     const { listings } = this.state;
 
     listings.forEach((myListing) => {
+      console.log(myListing);
       const contentString = `${myListing.description}`;
 
       const marker = new window.google.maps.Marker({
@@ -121,7 +123,6 @@ class App extends Component {
       });
     });
   }
-
 
   render() {
 

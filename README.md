@@ -15,7 +15,7 @@ Our app has the following features:
 
 These are the user stories we wrote to get ourselves started with the project and reach our MVP (we completed this by the end of the second day).
 
-`````
+```
 As a user
 So that I can make a request for help
 I want to create a listing
@@ -24,12 +24,9 @@ As a user
 So that I can find help on a map
 I want to see the listing location on Google Maps
 
-``````
+```
 
 ## User interaction diagram
-
-
-
 ![image]()
 
 ## Our learning documentation
@@ -38,6 +35,10 @@ I want to see the listing location on Google Maps
 - [Here](https://medium.com/giveit-blog) is our blog that we updated with regular posts.
 
 ## Installing and running the app locally
+
+** 
+Please note: if running the application locally, you must have a Google Maps API key set in `.env.local`. This is to prevent unauthorized use of our Google Maps API developer key. If you would like to provide your own key, store the key in `.env.local`, and name the key `REACT_APP_MAPS_API_KEY`. See the [React docs](https://facebook.github.io/create-react-app/docs/adding-custom-environment-variables) for more information.
+**
 
 First, clone this repository. Then check for dependencies with npm or yarn, and run a development server:
 

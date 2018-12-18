@@ -135,8 +135,9 @@ class App extends Component {
     return (
 
       <div className="app">
+      
       <Sidenav/>
-      <Navbar/>
+
         <TableListings
           listings={this.state.listings}
           removeList={this.removeList}

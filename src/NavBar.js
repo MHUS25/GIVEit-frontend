@@ -1,16 +1,37 @@
 import React, {Component} from "react";
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 
-class NavBar extends Component{
+
+
+
+export class NavBar extends React.Component{
+  constructor(props) {
+    super(props);
+
+    this.toggleNavbar = this.toggleNavbar.bind(this);
+    this.state = {
+      collapsed: true
+    };
+  }
+
+  toggleNavbar() {
+    this.setState({
+      collapsed: !this.state.collapsed
+    });
+  }
+
+
   render(){
 
     return(
-      <NavBar>
-        <NavBar.Header>
-          <NavBar.Brand>
-            <a href="#home">GIVEit </a>
-          </NavBar.Brand>
-        </NavBar.Header>
-      </NavBar>
+      <div>
+        <Navbar color="faded" light>
+          <NavbarBrand href="/" className="mr-auto">GIVEit</NavbarBrand>
+          <NavbarToggler onClick={this.toggleNavbar} className="mr-2">Sign in</NavbarToggler>
+          <NavbarToggler onClick={this.toggleNavbar} className="mr-2">Sign out</NavbarToggler>
+
+        </Navbar>
+      </div>
     );
   }
 }

@@ -3,6 +3,7 @@ import FormListings from './FormListings'
 import TableListings from './TableListings'
 import Map from './Map'
 import Navbar from './components/Navbar'
+import Sidenav from './components/Sidenav'
 
 
 const loadScript = (url) => {
@@ -134,6 +135,7 @@ class App extends Component {
     return (
 
       <div className="app">
+      <Sidenav/>
       <Navbar/>
         <TableListings
           listings={this.state.listings}

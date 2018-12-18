@@ -86,7 +86,7 @@ class App extends Component {
           listings: updatedListings,
         }, this.renderMap()));
   }
-  
+
 
   renderMap = () => {
     loadScript(`https://hnryjmes-cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_MAPS_API_KEY}&callback=initMap`);
@@ -132,6 +132,7 @@ class App extends Component {
 
     return (
       <div className="app">
+      <Navbar/>
         <TableListings
           listings={this.state.listings}
           removeList={this.removeList}

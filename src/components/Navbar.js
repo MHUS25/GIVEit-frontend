@@ -7,8 +7,8 @@ import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
 import { fade } from '@material-ui/core/styles/colorManipulator';
 import { withStyles } from '@material-ui/core/styles';
-import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
+import Button from '@material-ui/core/Button';
 
 const styles = theme => ({
   root: {
@@ -68,6 +68,18 @@ const styles = theme => ({
       },
     },
   },
+  button: {
+    margin: theme.spacing.unit,
+  },
+  leftIcon: {
+    marginRight: theme.spacing.unit,
+  },
+  rightIcon: {
+    marginLeft: theme.spacing.unit,
+  },
+  iconSmall: {
+    fontSize: 20,
+  },
 });
 
 function SearchAppBar(props) {
@@ -93,7 +105,14 @@ function SearchAppBar(props) {
             />
           </div>
           <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
-            <MenuIcon />
+            <Button variant="contained" color="primary" className={classes.button}>
+              Sign Up
+              {/* This Button uses a Font Icon, see the installation instructions in the docs. */}
+            </Button>
+            <Button variant="contained" color="primary" className={classes.button}>
+              Log In
+              {/* This Button uses a Font Icon, see the installation instructions in the docs. */}
+            </Button>
           </IconButton>
         </Toolbar>
       </AppBar>

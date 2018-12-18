@@ -112,7 +112,7 @@ class FormListings extends Component {
           value={email}
           onChange={this.handleChange}
         />
-        <label>Postie</label>
+        <label>Postee</label>
         <input
           type="text"
           id="user_name"

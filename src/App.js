@@ -140,11 +140,7 @@ class App extends Component {
           removeList={this.removeList}
         />
         <FormListings handleSubmit={this.handleSubmit} />
-<<<<<<< HEAD
-
-=======
         <Map />
->>>>>>> master
       </div>
     );
   }

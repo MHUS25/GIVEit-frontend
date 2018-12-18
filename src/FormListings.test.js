@@ -10,3 +10,14 @@ describe('FormListings', () => {
     shallow(<FormListings/>);
   });
 })
+
+it('calls onClickMockHandler event on form submit', () => {
+  const onClickMockHandler = jest.fn();
+  const props = {
+        handleSubmit: onClickMockHandler
+    }
+  let wrapper = mount(<FormListings {...props}/>);
+  wrapper.find('#submit').simulate('click');
+  expect(onClickMockHandler).toHaveBeenCalled();
+
+});

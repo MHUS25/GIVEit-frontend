@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import FormListings from "./FormListings";
 import TableListings from "./TableListings";
+import Navbar from './components/Navbar'
+
 
 
 class App extends Component {
@@ -56,12 +58,15 @@ class App extends Component {
   render() {
 
     return (
+
       <div className="app">
+      <Navbar/>
         <TableListings
           listings={this.state.listings}
           removeList={this.removeList}
         />
         <FormListings handleSubmit={this.handleSubmit} />
+
       </div>
     );
   }

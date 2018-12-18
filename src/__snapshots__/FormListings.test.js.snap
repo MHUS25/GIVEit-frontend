@@ -1,0 +1,535 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormListings should render without crashing 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <FormListings
+    debug={true}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <label>
+          Title
+        </label>,
+        <input
+          id="title"
+          name="title"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />,
+        <label>
+          Description
+        </label>,
+        <input
+          id="description"
+          name="description"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />,
+        <label>
+          Start Date
+        </label>,
+        <input
+          id="start_date"
+          name="start_date"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />,
+        <label>
+          End Date
+        </label>,
+        <input
+          id="end_date"
+          name="end_date"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />,
+        <label>
+          Listing Type
+        </label>,
+        <input
+          id="listing_type"
+          name="listing_type"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />,
+        <label>
+          Location
+        </label>,
+        <input
+          id="location"
+          name="location"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />,
+        <input
+          id="submit"
+          onClick={[Function]}
+          type="submit"
+          value="submit"
+        />,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Title",
+        },
+        "ref": null,
+        "rendered": "Title",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "id": "title",
+          "name": "title",
+          "onChange": [Function],
+          "type": "text",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Description",
+        },
+        "ref": null,
+        "rendered": "Description",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "id": "description",
+          "name": "description",
+          "onChange": [Function],
+          "type": "text",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Start Date",
+        },
+        "ref": null,
+        "rendered": "Start Date",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "id": "start_date",
+          "name": "start_date",
+          "onChange": [Function],
+          "type": "text",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "End Date",
+        },
+        "ref": null,
+        "rendered": "End Date",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "id": "end_date",
+          "name": "end_date",
+          "onChange": [Function],
+          "type": "text",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Listing Type",
+        },
+        "ref": null,
+        "rendered": "Listing Type",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "id": "listing_type",
+          "name": "listing_type",
+          "onChange": [Function],
+          "type": "text",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Location",
+        },
+        "ref": null,
+        "rendered": "Location",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "id": "location",
+          "name": "location",
+          "onChange": [Function],
+          "type": "text",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "id": "submit",
+          "onClick": [Function],
+          "type": "submit",
+          "value": "submit",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+    ],
+    "type": "form",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <label>
+            Title
+          </label>,
+          <input
+            id="title"
+            name="title"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />,
+          <label>
+            Description
+          </label>,
+          <input
+            id="description"
+            name="description"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />,
+          <label>
+            Start Date
+          </label>,
+          <input
+            id="start_date"
+            name="start_date"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />,
+          <label>
+            End Date
+          </label>,
+          <input
+            id="end_date"
+            name="end_date"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />,
+          <label>
+            Listing Type
+          </label>,
+          <input
+            id="listing_type"
+            name="listing_type"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />,
+          <label>
+            Location
+          </label>,
+          <input
+            id="location"
+            name="location"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />,
+          <input
+            id="submit"
+            onClick={[Function]}
+            type="submit"
+            value="submit"
+          />,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Title",
+          },
+          "ref": null,
+          "rendered": "Title",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "id": "title",
+            "name": "title",
+            "onChange": [Function],
+            "type": "text",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Description",
+          },
+          "ref": null,
+          "rendered": "Description",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "id": "description",
+            "name": "description",
+            "onChange": [Function],
+            "type": "text",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Start Date",
+          },
+          "ref": null,
+          "rendered": "Start Date",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "id": "start_date",
+            "name": "start_date",
+            "onChange": [Function],
+            "type": "text",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "End Date",
+          },
+          "ref": null,
+          "rendered": "End Date",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "id": "end_date",
+            "name": "end_date",
+            "onChange": [Function],
+            "type": "text",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Listing Type",
+          },
+          "ref": null,
+          "rendered": "Listing Type",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "id": "listing_type",
+            "name": "listing_type",
+            "onChange": [Function],
+            "type": "text",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Location",
+          },
+          "ref": null,
+          "rendered": "Location",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "id": "location",
+            "name": "location",
+            "onChange": [Function],
+            "type": "text",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "id": "submit",
+            "onClick": [Function],
+            "type": "submit",
+            "value": "submit",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+      ],
+      "type": "form",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

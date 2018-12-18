@@ -6,7 +6,7 @@ describe('Creating a listing', function () {
     cy.get('#start_date').type('Test startdate')
     cy.get('#end_date').type('Test enddate')
     cy.get('#listing_type').type('Test listingtype')
-    cy.get('#location').type('Test location')
+    cy.get('#location').type('E1 6LT')
     cy.get('#submit').click()
   });
 });

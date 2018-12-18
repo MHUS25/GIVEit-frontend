@@ -76,11 +76,8 @@ function SearchAppBar(props) {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
-            <MenuIcon />
-          </IconButton>
           <Typography className={classes.title} variant="h6" color="inherit" noWrap>
-            Material-UI
+            GIVEit
           </Typography>
           <div className={classes.grow} />
           <div className={classes.search}>
@@ -95,6 +92,9 @@ function SearchAppBar(props) {
               }}
             />
           </div>
+          <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
+            <MenuIcon />
+          </IconButton>
         </Toolbar>
       </AppBar>
     </div>

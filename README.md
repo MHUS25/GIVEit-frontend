@@ -1,54 +1,58 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# GIVEit-frontend  [![Build Status](https://travis-ci.org/MugeHasilci/GIVEit-frontend.svg?branch=master)](https://travis-ci.org/becc-mu/GIVEit-frontend)
 
-## Available Scripts
+This is a 2-week final project we undertook at Makers.
 
-In the project directory, you can run:
+Here is a link to our app in production: http://giveit.surge.sh/
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Our app has the following features:
+ - Signing up
+ - Logging in / out
+ - Creating, showing, updating and deleting listings
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Initial User Stories
 
-### `npm test`
+These are the user stories we wrote to get ourselves started with the project and reach our MVP (we completed this by the end of the second day).
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`````
+As a user
+So that I can make a request for help
+I want to create a listing
 
-### `npm run build`
+As a user
+So that I can find help on a map
+I want to see the listing location on Google Maps
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+``````
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## User interaction diagram
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![image]()
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Our learning documentation
+- [Here](https://trello.com/b/fCE5cFQb/giveit) is our card wall for the project
+- [Here](https://github.com/MugeHasilci/GIVEit-frontend/wiki) is our learning log that we updated each day.
+- [Here](https://medium.com/giveit-blog) is our blog that we updated with regular posts.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Installing and running the app locally
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+First, clone this repository. Then check for dependencies with npm or yarn, and run a development server:
 
-##Install yarn
-````
-$ brew install yarn
-````
+```bash
+> yarn
+> yarn start # Start the server at localhost:3000
+```
 
-##Initiate yarn
-````
-$ yarn
-````
+## Tests
 
-## Learn More
+To run tests, first use npm or yarn to run Cypress and pick a test to run, or run all tests:
+```bash
+> yarn cypress:open
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contributing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Feel free to open a GitHub issue with anything you notice. Fork then clone the repository if you want to make any changes, then make a pull request with your changes. Changes must be approved in a pull request before being merged into the master branch.

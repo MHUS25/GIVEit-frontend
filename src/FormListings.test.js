@@ -1,0 +1,12 @@
+import React from 'react';
+import FormListings from './FormListings'
+import {shallow, mount} from 'enzyme'
+import { configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+configure({ adapter: new Adapter() });
+
+describe('FormListings', () => {
+  it('should render without crashing', () => {
+    shallow(<FormListings/>);
+  });
+});

@@ -6,6 +6,7 @@ cache:
  - node_modules
 script:
  - yarn run build
+ - yarn test a
  - cypress install
  - yarn start & wait-on http://localhost:3000
  - yarn cypress run

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import FormListings from './FormListings'
 import TableListings from './TableListings'
 import Map from './Map'
+import Navbar from './components/Navbar'
 
 
 const loadScript = (url) => {
@@ -139,7 +140,9 @@ class App extends Component {
   render() {
 
     return (
+
       <div className="app">
+      <Navbar/>
         <TableListings
           listings={this.state.listings}
           removeList={this.removeList}

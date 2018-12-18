@@ -38,4 +38,7 @@ const { classes } = props;
      </AppBar>
    </div>
  );
-}
+
+ SearchAppBar.propTypes = {
+ classes: PropTypes.object.isRequired,
+};

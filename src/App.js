@@ -77,6 +77,9 @@ class App extends Component {
 
     Promise.all(fetches)
       .then(responseJson => updatedListings.map((listing, index) => {
+          if (responseJson[index].status === 'INVALID_REQUEST') {
+            return null;
+          }
           return listing.latLng = responseJson[index].results[0].geometry.location;
         }))
       .then(() => this.setState({
@@ -98,7 +101,7 @@ class App extends Component {
 
     const myMap = new window.google.maps.Map(document.getElementById('map'), {
       center: { lat: MAKERS_ACADEMY_POSITION.lat, lng: MAKERS_ACADEMY_POSITION.lng },
-      zoom: 13,
+      zoom: 11,
     });
 
     const infowindow = new window.google.maps.InfoWindow();
@@ -106,6 +109,8 @@ class App extends Component {
     const { listings } = this.state;
 
     listings.forEach((myListing) => {
+      if (myListing.latLng === undefined) return null;
+
       const contentString = `${myListing.title}`;
 
       const marker = new window.google.maps.Marker({

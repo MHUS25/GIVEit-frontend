@@ -30,7 +30,6 @@ class App extends Component {
       }).then(()=>{
         this.getLatLng()
       })
-
   }
 
   handleSubmit = listing => {
@@ -69,19 +68,20 @@ class App extends Component {
   getLatLng = () => {
     const { listings } = this.state;
     let updatedListings = [...listings];
-    updatedListings.forEach((listing) => {
-      let location = listing.location;
-      fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${location}&key=${process.env.REACT_APP_MAPS_API_KEY}`,{
+
+    let fetches = updatedListings.map((listing) => {
+      return fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${listing.location}&key=${process.env.REACT_APP_MAPS_API_KEY}`,{
         method: 'GET'
       }).then(response => response.json())
-        .then((responseJson) => {
-        let myLatLng = responseJson.results[0].geometry.location;
-          listing.latLng = myLatLng;
-        });
-      });
-    this.setState({
-      listings: updatedListings
-    }, this.renderMap());
+    });
+
+    Promise.all(fetches)
+      .then(responseJson => updatedListings.map((listing, index) => {
+          return listing.latLng = responseJson[index].results[0].geometry.location;
+        }))
+      .then(() => this.setState({
+          listings: updatedListings,
+        }, this.renderMap()));
   }
   
 
@@ -106,7 +106,6 @@ class App extends Component {
     const { listings } = this.state;
 
     listings.forEach((myListing) => {
-      console.log(myListing);
       const contentString = `${myListing.title}`;
 
       const marker = new window.google.maps.Marker({

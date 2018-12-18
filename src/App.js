@@ -107,7 +107,7 @@ class App extends Component {
 
     listings.forEach((myListing) => {
       console.log(myListing);
-      const contentString = `${myListing.description}`;
+      const contentString = `${myListing.title}`;
 
       const marker = new window.google.maps.Marker({
         position: {

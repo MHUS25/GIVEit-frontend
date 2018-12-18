@@ -5,7 +5,7 @@ describe('Creating a listing', function () {
     cy.get('#description').type('Basically just really bored')
     cy.get('#start_date').type('25/12/2018')
     cy.get('#end_date').type('25/12/2018')
-    cy.get('#listing_type').type('Need')
+    cy.get('#listing_type').select('Need')
     cy.get('#location').type('E1 6LT')
     cy.get('#phone_number').type('020 7499 9000')
     cy.get('#email').type('barack@obama.org')

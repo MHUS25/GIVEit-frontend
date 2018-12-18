@@ -80,14 +80,17 @@ class FormListings extends Component {
           value={end_date}
           onChange={this.handleChange}
         />
-        <label>Listing Type</label>
-        <input
-          type="text"
+        <label>Select Listing Type
+        <select
           id="listing_type"
           name="listing_type"
-          value={listing_type}
+          value={this.state.value}
           onChange={this.handleChange}
-        />
+        >
+        <option value="Need">Need</option>
+        <option value="Support">Support</option>
+        </select>
+        </label>
         <label>Location</label>
         <input
           type="text"

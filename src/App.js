@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import FormListings from "./FormListings";
 import TableListings from "./TableListings";
-import NavBar from "./NavBar";
+import NavBar from './components/NavBar'
 
 
 class App extends Component {

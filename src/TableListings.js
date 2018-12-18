@@ -26,6 +26,9 @@ const TableHeader = () => {
         <th>End Date</th>
         <th>Listing Type</th>
         <th>Location</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+        <th>Postee</th>
       </tr>
     </thead>
   );
@@ -41,6 +44,9 @@ const TableBody = props => {
         <td>{row.end_date}</td>
         <td>{row.listing_type}</td>
         <td>{row.location}</td>
+        <td>{row.phone_number}</td>
+        <td>{row.email}</td>
+        <td>{row.user_name}</td>
         <td>
           <button onClick={() => props.removeList(row.id, index)}>Delete</button>
         </td>

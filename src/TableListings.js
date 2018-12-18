@@ -28,7 +28,7 @@ const TableHeader = () => {
         <th>Location</th>
         <th>Phone Number</th>
         <th>Email</th>
-        <th>Postie</th>
+        <th>Postee</th>
       </tr>
     </thead>
   );

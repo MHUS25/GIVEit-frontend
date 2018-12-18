@@ -87,8 +87,8 @@ class FormListings extends Component {
           value={this.state.value}
           onChange={this.handleChange}
         >
-        <option value="need">Need</option>
-        <option value="support">Support</option>
+        <option value="Need">Need</option>
+        <option value="Support">Support</option>
         </select>
         </label>
         <label>Location</label>

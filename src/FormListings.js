@@ -39,7 +39,6 @@ class FormListings extends Component {
       description,
       start_date,
       end_date,
-      listing_type,
       location,
       phone_number,
       email,

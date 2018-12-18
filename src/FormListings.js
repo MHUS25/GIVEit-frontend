@@ -80,11 +80,11 @@ class FormListings extends Component {
           value={end_date}
           onChange={this.handleChange}
         />
-        <label>Listing Type:
+        <label>Select Listing Type
         <select
           id="listing_type"
           name="listing_type"
-          value={listing_type}
+          value={this.state.value}
           onChange={this.handleChange}
         >
         <option value="need">Need</option>

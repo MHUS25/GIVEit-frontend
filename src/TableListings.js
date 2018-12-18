@@ -48,7 +48,7 @@ const TableBody = props => {
         <td>{row.email}</td>
         <td>{row.user_name}</td>
         <td>
-          <button onClick={() => props.removeList(row.id, index)}>Delete</button>
+          <button className='delete' onClick={() => props.removeList(row.id, index)}>Delete</button>
         </td>
       </tr>
     );

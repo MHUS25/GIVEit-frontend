@@ -38,7 +38,6 @@ class FormListings extends Component {
       description,
       start_date,
       end_date,
-      listing_type,
       location,
       phone_number,
       email,
@@ -79,17 +78,14 @@ class FormListings extends Component {
           value={end_date}
           onChange={this.handleChange}
         />
-        <label>Select Listing Type
-        <select
+        <label>Listing Type</label>
+        <input
+          type="text"
           id="listing_type"
           name="listing_type"
-          value={this.state.value}
+          value={listing_type}
           onChange={this.handleChange}
-        >
-        <option value="Need">Need</option>
-        <option value="Support">Support</option>
-        </select>
-        </label>
+        />
         <label>Location</label>
         <input
           type="text"

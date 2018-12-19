@@ -14,15 +14,12 @@ function Footer(){
       </div>
 
       <div class='resources'>
-        API Integration with
-        <a href="https://developers.google.com/maps/documentation/javascript/get-api-key">
-          Google Maps
-        </a>
-        <a>,    </a>
-        APP created with
-        <a href='https://facebook.github.io/create-react-app/'>
-          Create-React-App
-        </a>
+        <ul>
+          API Integration with: 
+          <a href="https://developers.google.com/maps/documentation/javascript/get-api-key">
+            Google Maps
+          </a>
+        </ul>
       </div>
     </div>
   )

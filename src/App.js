@@ -3,6 +3,8 @@ import TableListings from './TableListings'
 import Map from './Map'
 import Navbar from './components/Navbar'
 import SideBar from './components/SideBar'
+
+
 import './App.css'
 
 
@@ -145,10 +147,12 @@ class App extends Component {
 
       <div className="app">
       <SideBar handleSubmit={this.handleSubmit} />
+
       <Navbar/>
         <TableListings
           listings={this.state.listings}
           removeList={this.removeList}
+          SideTableListings handleSubmit={this.handleSubmit}
         />
         <Map />
       </div>

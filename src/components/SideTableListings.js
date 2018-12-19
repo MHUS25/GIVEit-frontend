@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { slide as Menu } from 'react-burger-menu';
 
 class TableListings extends Component {
   render() {
@@ -18,6 +19,7 @@ export default TableListings;
 
 const TableHeader = () => {
   return (
+    <Menu>
     <thead>
       <tr>
         <th>Title</th>
@@ -51,6 +53,7 @@ const TableBody = props => {
           <button className='delete' onClick={() => props.removeList(row.id, index)}>Delete</button>
         </td>
       </tr>
+      </Menu>
     );
   });
 

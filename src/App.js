@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import TableListings from './TableListings'
+
 import Map from './Map'
 import Navbar from './components/Navbar'
 import SideBar from './components/SideBar'
-
-
+import SideTableListings from './components/SideTableListings'
 import './App.css'
 
 
@@ -149,10 +148,10 @@ class App extends Component {
       <SideBar handleSubmit={this.handleSubmit} />
 
       <Navbar/>
-        <TableListings
+        <SideTableListings
           listings={this.state.listings}
           removeList={this.removeList}
-          SideTableListings handleSubmit={this.handleSubmit}
+          
         />
         <Map />
       </div>

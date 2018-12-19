@@ -18,6 +18,10 @@ body {
   overflow: auto;
 }
 
+#footer-text {
+  text-align: center;
+}
+
 .bm-item {
   display: inline-block;
   text-decoration: none;

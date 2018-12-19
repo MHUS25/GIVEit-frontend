@@ -7,9 +7,11 @@ Here is a link to our app in production: http://giveit.surge.sh/
 ## Features
 
 Our app has the following features:
- - Signing up
- - Logging in / out
- - Creating, showing, updating and deleting listings
+ - Creating, showing, and deleting listings
+ - Communicating with the GIVEit backend API via JSON, persisting the data in a database
+ - Converting a listing address to a latitude/longitude pair via the Google Maps Geocoding API
+ - Showing a marker on Google Maps using the Google Maps JavaScript API
+ - Showing an info box on Google Maps using the Google Maps JavaScript API
 
 ## Initial User Stories
 
@@ -32,7 +34,6 @@ I want to see the listing location on Google Maps
 ## Our learning documentation
 - [Here](https://trello.com/b/fCE5cFQb/giveit) is our card wall for the project
 - [Here](https://github.com/MugeHasilci/GIVEit-frontend/wiki) is our learning log that we updated each day.
-- [Here](https://medium.com/giveit-blog) is our blog that we updated with regular posts.
 
 ## Installing and running the app locally
 
@@ -61,3 +62,8 @@ To run unit tests, use npm or yarn to run the React test script, e.g. to run all
 ## Contributing
 
 Feel free to open a GitHub issue with anything you notice. Fork then clone the repository if you want to make any changes, then make a pull request with your changes. Changes must be approved in a pull request before being merged into the master branch.
+
+## Early version screenshots (not final)
+
+![Screenshot 1](./public/screenshots/Screenshot_1.png)
+![Screenshot 2](./public/screenshots/Screenshot_2.png)

@@ -2,6 +2,8 @@
 
 This is a 2-week final project we undertook at Makers.
 
+This application consists of a [Rails API](https://github.com/becc-mu/GIVEit-backend) and a ReactJS front-end, this repo houses the latter.
+
 Here is a link to our app in production: http://giveit.surge.sh/
 
 ## Features

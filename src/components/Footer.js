@@ -6,10 +6,9 @@ function Footer(){
       <div id='footer-text'>
         GIVEit © 2018
         <p>
-        <a href="https://github.com/MugeHasilci/GIVEit-frontend" id='footer-text2'> Code for this project can be foound in this repo</a>
+        <a href="https://github.com/MugeHasilci/GIVEit-frontend" id='footer-text2'> Code for this project can be found in this repo</a>
         </p>
       </div>
-
   )
 }
 

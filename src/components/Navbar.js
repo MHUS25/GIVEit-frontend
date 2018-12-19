@@ -13,6 +13,7 @@ import Button from '@material-ui/core/Button';
 const styles = theme => ({
   root: {
     width: '100%',
+    position: 'fixed'
   },
   grow: {
     flexGrow: 1,

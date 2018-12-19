@@ -62,9 +62,9 @@ const styles = theme => ({
     transition: theme.transitions.create('width'),
     width: '100%',
     [theme.breakpoints.up('sm')]: {
-      width: 120,
+      width: 220,
       '&:focus': {
-        width: 200,
+        width: 440,
       },
     },
   },
@@ -89,7 +89,7 @@ function SearchAppBar(props) {
       <AppBar position="static">
         <Toolbar>
           <Typography className={classes.title} variant="h6" color="inherit" noWrap>
-            GIVEit
+            <a id="logo-link" href="/">GIVEit</a>
           </Typography>
           <div className={classes.grow} />
           <div className={classes.search}>
@@ -97,13 +97,15 @@ function SearchAppBar(props) {
               <SearchIcon />
             </div>
             <InputBase
-              placeholder="Search…"
+              placeholder="Search Map"
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
               }}
+              id="pac-input"
             />
           </div>
+          <div className={classes.grow} />
           <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
             <Button variant="contained" color="primary" className={classes.button}>
               Sign Up

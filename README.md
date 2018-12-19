@@ -67,3 +67,10 @@ Feel free to open a GitHub issue with anything you notice. Fork then clone the r
 
 ![Screenshot 1](./public/screenshots/Screenshot_1.png)
 ![Screenshot 2](./public/screenshots/Screenshot_2.png)
+
+## Team Members
+[Muna Hussein](https://github.com/MHUS25) |
+[Muge Hasilci](https://github.com/MugeHasilci) |
+[Henry Cooksley](https://github.com/hnryjmes)  |
+[Ryan Clark](https://github.com/RyanWolfen7)  |
+[Rebecca Mulugeta](https://github.com/becc-mu)

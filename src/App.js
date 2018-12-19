@@ -79,7 +79,8 @@ class App extends Component {
 
     Promise.all(fetches)
       .then(responseJson => updatedListings.map((listing, index) => {
-          if (responseJson[index].status === 'INVALID_REQUEST') {
+          console.log(responseJson);
+          if (responseJson[index].status !== 'OK') {
             return null;
           }
           return listing.latLng = responseJson[index].results[0].geometry.location;

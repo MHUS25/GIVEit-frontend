@@ -78,13 +78,16 @@ class FormListings extends Component {
           value={end_date}
           onChange={this.handleChange}
         />
-        <label>Select Listing Type
+        <label>Listing Type
         <select
           id="listing_type"
           name="listing_type"
-          value={this.state.value}
           onChange={this.handleChange}
+          native defaultValue='none'
         >
+        <option value="none" disabled>
+            Select Listing Type
+          </option>
         <option value="Need">Need</option>
         <option value="Support">Support</option>
         </select>

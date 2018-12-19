@@ -115,7 +115,7 @@ class App extends Component {
         lat: MAKERS_ACADEMY_POSITION.lat,
         lng: MAKERS_ACADEMY_POSITION.lng
       },
-      zoom: 11,
+      zoom: 13,
     });
 
     const input = document.getElementById('pac-input');
@@ -128,7 +128,7 @@ class App extends Component {
     searchBox.addListener('places_changed', function() {
       var places = searchBox.getPlaces();
 
-      if (places.length == 0) {
+      if (places.length === 0) {
         return;
       }
 
@@ -190,26 +190,15 @@ class App extends Component {
   render() {
 
     return (
-
-      <
-      div className = "app" >
-      <
-      SideBar handleSubmit = {
-        this.handleSubmit
-      }
-      /> <
-      Navbar / >
-      <
-      Map / >
-      <
-      TableListings listings = {
-        this.state.listings
-      }
-      removeList = {
-        this.removeList
-      }
-      /> <
-      /div>
+      <div className = "app">
+        <SideBar handleSubmit = {this.handleSubmit} /> 
+        <Navbar />
+        <Map />
+        <TableListings 
+          listings = {this.state.listings}
+          removeList = {this.removeList}
+        /> 
+      </div>
     );
   }
 }

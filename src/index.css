@@ -2,7 +2,7 @@
  * A front end Sass boilerplate
  *
  * Author: Tania Rascia
- */ 
+ */
 /* Variables
  * ===============
  *
@@ -667,5 +667,5 @@ caption {
   =============== */
 
 #map {
-  height: 100vh;
+  height: 80vh;
 }

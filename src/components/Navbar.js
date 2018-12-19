@@ -97,13 +97,15 @@ function SearchAppBar(props) {
               <SearchIcon />
             </div>
             <InputBase
-              placeholder="Search…"
+              placeholder="Search Map"
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
               }}
+              id="pac-input"
             />
           </div>
+          <div className={classes.grow} />
           <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
             <Button variant="contained" color="primary" className={classes.button}>
               Sign Up

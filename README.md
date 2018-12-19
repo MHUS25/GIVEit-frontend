@@ -29,7 +29,7 @@ I want to see the listing location on Google Maps
 ```
 
 ## User interaction diagram
-![image]()
+// TODO
 
 ## Our learning documentation
 - [Here](https://trello.com/b/fCE5cFQb/giveit) is our card wall for the project

@@ -3,6 +3,7 @@ import TableListings from './TableListings'
 import Map from './Map'
 import Navbar from './components/Navbar'
 import SideBar from './components/SideBar'
+import Footer from './components/Footer'
 import './App.css'
 
 
@@ -151,6 +152,7 @@ class App extends Component {
           removeList={this.removeList}
         />
         <Map />
+        <Footer />
       </div>
     );
   }

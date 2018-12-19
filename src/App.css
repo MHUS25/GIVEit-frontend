@@ -64,3 +64,15 @@ body {
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
 }
+
+.team {
+  float: left;
+  width: 520px;
+  padding: 10px;
+}
+
+.resources{
+  float: right;
+  width: 620px;
+  padding: 10px;
+}

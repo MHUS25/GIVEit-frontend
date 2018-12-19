@@ -89,7 +89,7 @@ function SearchAppBar(props) {
       <AppBar position="static">
         <Toolbar>
           <Typography className={classes.title} variant="h6" color="inherit" noWrap>
-            GIVEit
+            <a id="logo-link" href="/">GIVEit</a>
           </Typography>
           <div className={classes.grow} />
           <div className={classes.search}>

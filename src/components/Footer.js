@@ -3,25 +3,12 @@ import '../App.css'
 
 function Footer(){
   return (
-    <div>
-      <div class='team'>
-        This App was created by:
-        <a href="https://github.com/RyanWolfen7"> Ryan Clark, </a>
-        <a href="https://github.com/MugeHasilci"> Muge Hasilci, </a>
-        <a href="https://github.com/MHUS25"> Muna Hussein, </a>
-        <a href="https://github.com/hnryjmes"> Henry Cooksley, </a>
-        <a href="https://github.com/becc-mu"> Rebecca Mulugeta </a>
+      <div id='footer-text'>
+        GIVEit © 2018
+        <p>
+        <a href="https://github.com/MugeHasilci/GIVEit-frontend" id='footer-text2'> Code for this project can be found in this repo</a>
+        </p>
       </div>
-
-      <div class='resources'>
-        <ul>
-          API Integration with:
-          <a href="https://developers.google.com/maps/documentation/javascript/get-api-key">
-            Google Maps
-          </a>
-        </ul>
-      </div>
-    </div>
   )
 }
 

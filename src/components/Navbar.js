@@ -105,7 +105,7 @@ function SearchAppBar(props) {
             />
           </div>
           <div className={classes.grow} />
-          <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
+          {/* <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer"> */}
             <Button variant="contained" color="primary" className={classes.button}>
               Sign Up
               {/* This Button uses a Font Icon, see the installation instructions in the docs. */}
@@ -114,7 +114,7 @@ function SearchAppBar(props) {
               Log In
               {/* This Button uses a Font Icon, see the installation instructions in the docs. */}
             </Button>
-          </IconButton>
+          {/* </IconButton> */}
         </Toolbar>
       </AppBar>
     </div>

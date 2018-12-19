@@ -1,5 +1,5 @@
 import React from 'react';
-import FormListings from './FormListings'
+import FormListings from './components/SideBar'
 import {shallow, mount} from 'enzyme'
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';

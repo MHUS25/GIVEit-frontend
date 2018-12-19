@@ -7,10 +7,10 @@ function Footer(){
       <div class='team'>
         This App was created by:
         <a href="https://github.com/RyanWolfen7"> Ryan Clark, </a>
-        <a href="https://github.com/RyanWolfen7"> Muge, </a>
-        <a href="https://github.com/RyanWolfen7"> Muna, </a>
-        <a href="https://github.com/RyanWolfen7"> Henry, </a>
-        <a href="https://github.com/RyanWolfen7"> Rebecca </a>
+        <a href="https://github.com/MugeHasilci"> Muge Hasilci, </a>
+        <a href="hhttps://github.com/MHUS25"> Muna Hussein, </a>
+        <a href="https://github.com/hnryjmes"> Henry Cooksley, </a>
+        <a href="https://github.com/becc-mu"> Rebecca Mulugeta </a>
       </div>
 
       <div class='resources'>

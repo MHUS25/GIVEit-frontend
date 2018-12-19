@@ -67,12 +67,10 @@ body {
 
 .team {
   float: left;
-  width: 520px;
+  width: 820px;
   padding: 10px;
 }
 
 .resources{
-  float: right;
-  width: 620px;
-  padding: 10px;
+  text-align: center;
 }

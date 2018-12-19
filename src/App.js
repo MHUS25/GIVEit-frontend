@@ -113,6 +113,10 @@ class App extends Component {
       if (myListing.latLng === undefined) return null;
 
       const contentString = `${myListing.title}`;
+      let color;
+
+      if (myListing.listing_type === "Support") {color="http://maps.google.com/mapfiles/ms/icons/green-dot.png"}
+      if (myListing.listing_type === "Need") { color="http://maps.google.com/mapfiles/ms/icons/red-dot.png"}
 
       const marker = new window.google.maps.Marker({
         position: {
@@ -120,7 +124,11 @@ class App extends Component {
           lng: myListing.latLng.lng,
         },
         map: myMap,
+        icon: {
+        url: color
+      }
       });
+
 
       marker.addListener('click', () => {
         infowindow.setContent(contentString);

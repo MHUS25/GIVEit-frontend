@@ -46,7 +46,7 @@ class FormListings extends Component {
     } = this.state;
 
     return (
-      <Menu>
+      <Menu customBurgerIcon={ <img src="http://www.clker.com/cliparts/J/N/5/l/n/k/add-button-blue-hi.png" /> }>
         <form>
           <label>Title</label>
           <input

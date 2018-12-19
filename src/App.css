@@ -29,6 +29,11 @@ body {
   vertical-align: middle;
 }
 
+#footer-text2 {
+  color: #ffffff;
+  font-size: 10px;
+}
+
 .bm-item {
   display: inline-block;
   text-decoration: none;

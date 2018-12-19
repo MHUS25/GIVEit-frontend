@@ -14,4 +14,9 @@ describe('Creating a listing', () => {
     cy.get('#user_name').type('Barack');
     cy.get('#submit').click();
   });
+  
+  it('can delete a listing', () => {
+    cy.visit('/');
+    cy.get('.delete').last().click();
+  });
 });

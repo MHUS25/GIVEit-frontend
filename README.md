@@ -49,9 +49,13 @@ First, clone this repository. Then check for dependencies with npm or yarn, and 
 
 ## Tests
 
-To run tests, first use npm or yarn to run Cypress and pick a test to run, or run all tests:
+To run integration tests, first use npm or yarn to run Cypress and pick a test to run, or run all tests:
 ```bash
 > yarn cypress:open
+```
+To run unit tests, use npm or yarn to run the React test script, e.g. to run all tests:
+```bash
+> yarn test a
 ```
 
 ## Contributing

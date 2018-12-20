@@ -2,7 +2,7 @@
 
 For our 2-week final project at Makers, we built GIVEit.
 
-GIVEit is a social platform for connecting people in need with people offering services that can help them.
+GIVEit is a social platform for connecting people in need with people offering goods/services that can help them.
 
 The application consists of a [Rails API](https://github.com/becc-mu/GIVEit-backend) and a ReactJS front-end, this repo houses the latter.
 
@@ -67,10 +67,9 @@ To run unit tests, use npm or yarn to run the React test script, e.g. to run all
 
 Feel free to open a GitHub issue with anything you notice. Fork then clone the repository if you want to make any changes, then make a pull request with your changes. Changes must be approved in a pull request before being merged into the master branch.
 
-## Early version screenshots (not final)
+## Screenshot
 
-![Screenshot 1](./public/screenshots/Screenshot_1.png)
-![Screenshot 2](./public/screenshots/Screenshot_2.png)
+![Screenshot 1](./public/screenshots/final-app.png)
 
 ## Team Members
 [Muna Hussein](https://github.com/MHUS25) |

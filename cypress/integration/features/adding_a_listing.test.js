@@ -2,7 +2,7 @@
 describe('Creating a listing', () => {
   it('has a form which can be filled', () => {
     cy.visit('/');
-    cy.get('.bm-burger-button').click();
+    cy.get('.menu-1 .bm-burger-button').click();
     cy.get('#title').type('I need some comic books');
     cy.get('#description').type('Basically just really bored');
     cy.get('#start_date').type('25/12/2018');
@@ -14,9 +14,10 @@ describe('Creating a listing', () => {
     cy.get('#user_name').type('Barack');
     cy.get('#submit').click();
   });
-  
+
   it('can delete a listing', () => {
     cy.visit('/');
+    cy.get('.menu-2 .bm-burger-button').click();
     cy.get('.delete').last().click();
   });
 });

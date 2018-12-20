@@ -1,5 +1,5 @@
 import React from 'react';
-import TableListings from './TableListings'
+import TableListings from './components/ListingBar'
 import {shallow, mount} from 'enzyme'
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';

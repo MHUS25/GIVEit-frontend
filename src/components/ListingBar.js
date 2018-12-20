@@ -1,15 +1,21 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
+import { slide as Menu } from 'react-burger-menu';
+
 
 class TableListings extends Component {
   render() {
     const { listings, removeList } = this.props;
 
     return (
-      <table>
-        <TableHeader />
-        <TableBody listings={listings}
-          removeList={removeList} />
-      </table>
+    <div className='menu-2'>
+      <Menu width={ '900px' } right>
+        <table>
+          <TableHeader />
+          <TableBody listings={listings}
+            removeList={removeList} />
+        </table>
+      </Menu>
+    </div>
     );
   }
 }

@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
-import TableListings from './TableListings'
+import React, { Component } from 'react';
 import Map from './Map'
 import Navbar from './components/Navbar'
 import SideBar from './components/SideBar'
+import TableListings from './components/ListingBar'
 import Footer from './components/Footer'
 import './App.css'
 
@@ -197,12 +197,12 @@ class App extends Component {
     return (
       <div className = "app">
         <SideBar handleSubmit = {this.handleSubmit} />
-        <Navbar />
-        <Map />
         <TableListings
           listings = {this.state.listings}
           removeList = {this.removeList}
         />
+        <Navbar />
+        <Map />
         <Footer />
       </div>
     );

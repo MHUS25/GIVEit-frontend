@@ -90,6 +90,7 @@ function SearchAppBar(props) {
           <Typography className={classes.title} variant="h6" color="inherit" noWrap>
             <a id="logo-link" href="/">GIVEit</a>
           </Typography>
+          
           <div className={classes.grow} />
           <div className={classes.search}>
             <div className={classes.searchIcon}>
@@ -104,7 +105,8 @@ function SearchAppBar(props) {
               id="pac-input"
             />
           </div>
-          <div className={classes.grow} />
+
+          <div className={classes.fullList} />
           {/* <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer"> */}
             <Button variant="contained" color="primary" className={classes.button}>
               About

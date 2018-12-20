@@ -2,14 +2,14 @@ const deferred = require('./deferred')
 
 describe('Viewing all listings', function() {
   beforeEach(function() {
-    this.fetchPostsDeferred = deferred()
+    this.fetchListingsDeferred = deferred()
 
     cy.visit('/', {
       onBeforeLoad (win) {
         cy.stub(win, 'fetch')
         .withArgs('https://giveit-backend.herokuapp.com/listings')
         .as('fetchListings')
-        .returns(this.fetchPostsDeferred.promise)
+        .returns(this.fetchListingsDeferred.promise)
       }
     })
   });

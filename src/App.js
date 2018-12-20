@@ -1,4 +1,3 @@
-/*global google*/
 import React, {Component} from 'react';
 import TableListings from './TableListings'
 import Map from './Map'
@@ -181,7 +180,7 @@ class App extends Component {
 
       marker.addListener('click', () => {
         if(marker.getAnimation() !==null) { marker.setAnimation(null); }
-        else { marker.setAnimation(google.maps.Animation.BOUNCE); }
+        else { marker.setAnimation(window.google.maps.Animation.BOUNCE); }
         setTimeout(() => { marker.setAnimation(null) }, 1500);
       });
 

@@ -180,6 +180,12 @@ class App extends Component {
         }
       });
 
+      marker.addListener('click', () => {
+        if(marker.getAnimation() !==null) { marker.setAnimation(null); }
+        else { marker.setAnimation(google.maps.Animation.BOUNCE); }
+        setTimeout(() => { marker.setAnimation(null) }, 1500);
+      });
+
 
       marker.addListener('click', () => {
         infowindow.setContent(contentString);

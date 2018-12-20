@@ -28,7 +28,7 @@ body {
   vertical-align: -webkit-baseline-middle;;
 }
 
-.bm-item {
+.menu-1 .bm-item {
   display: inline-block;
   text-decoration: none;
   margin-bottom: 10px;
@@ -44,7 +44,11 @@ body {
   transition: color 0.8s;
 }
 
-.bm-item:hover {
+.menu-1 .bm-item:hover {
+  color: black;
+}
+
+.menu-2 .bm-item:hover {
   color: black;
 }
 
@@ -66,34 +70,65 @@ body {
   margin-top: 350px;
 }
 
-.bm-burger-bars {
+.menu-1 .bm-burger-bars {
   background: black;
 }
 
-.bm-cross-button {
+.menu-2 .bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+.menu-2 .bm-burger-bars {
+  background: black;
+}
+
+.menu-2 .bm-cross-button {
   height: 24px;
   width: 24px;
 }
 
-.bm-cross {
+.menu-1 .bm-cross {
   background: #bdc3c7;
 }
 
-.bm-menu {
+.menu-2 .bm-cross {
+  background: #bdc3c7;
+}
+
+.menu-1 .bm-menu {
   background: #fff;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }
 
-.bm-morph-shape {
+.menu-2 .bm-menu {
+  background: #fff;
+  padding: 2.5em 1.5em 0;
+  font-size: 0.75em;
+  margin-top: 0;
+}
+
+.menu-1 .bm-morph-shape {
   fill: #373a47;
 }
 
-.bm-item-list {
+.menu-1 .bm-item-list {
   color: #b8b7ad;
 }
 
-.bm-overlay {
+.menu-1 .bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.menu-2 .bm-morph-shape {
+  fill: #373a47;
+}
+
+.menu-2 .bm-item-list {
+  color: #b8b7ad;
+}
+
+.menu-2 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
 }
 

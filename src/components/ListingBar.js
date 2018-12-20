@@ -8,7 +8,7 @@ class TableListings extends Component {
 
     return (
     <div className='menu-2'>
-      <Menu>
+      <Menu width={ '900px' } right>
         <table>
           <TableHeader />
           <TableBody listings={listings}

@@ -193,12 +193,12 @@ class App extends Component {
     return (
       <div className = "app">
         <SideBar handleSubmit = {this.handleSubmit} />
-        <Navbar />
-        <Map />
         <TableListings
           listings = {this.state.listings}
           removeList = {this.removeList}
         />
+        <Navbar />
+        <Map />
         <Footer />
       </div>
     );

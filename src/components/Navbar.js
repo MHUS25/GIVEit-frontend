@@ -107,6 +107,10 @@ function SearchAppBar(props) {
           <div className={classes.grow} />
           {/* <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer"> */}
             <Button variant="contained" color="primary" className={classes.button}>
+              About
+              {/* This Button uses a Font Icon, see the installation instructions in the docs. */}
+            </Button>
+            <Button variant="contained" color="primary" className={classes.button}>
               Sign Up
               {/* This Button uses a Font Icon, see the installation instructions in the docs. */}
             </Button>

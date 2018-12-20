@@ -6,6 +6,7 @@ import Map from './Map'
 import Navbar from './components/Navbar'
 import SideBar from './components/SideBar'
 import Footer from './components/Footer'
+import InfoBox from './components/InfoBox'
 import './App.css'
 
 
@@ -192,13 +193,14 @@ class App extends Component {
 
     return (
       <div className = "app">
-        <SideBar handleSubmit = {this.handleSubmit} /> 
+        <SideBar handleSubmit = {this.handleSubmit} />
         <Navbar />
+        <InfoBox />
         <Map />
-        <TableListings 
+        <TableListings
           listings = {this.state.listings}
           removeList = {this.removeList}
-        /> 
+        />
         <Footer />
       </div>
     );

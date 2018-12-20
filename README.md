@@ -1,8 +1,10 @@
 # GIVEit-frontend  [![Build Status](https://travis-ci.org/MugeHasilci/GIVEit-frontend.svg?branch=master)](https://travis-ci.org/becc-mu/GIVEit-frontend)
 
-This is a 2-week final project we undertook at Makers.
+For our 2-week final project at Makers, we built GIVEit.
 
-This application consists of a [Rails API](https://github.com/becc-mu/GIVEit-backend) and a ReactJS front-end, this repo houses the latter.
+GIVEit is a social platform for connecting people in need with people offering services that can help them.
+
+The application consists of a [Rails API](https://github.com/becc-mu/GIVEit-backend) and a ReactJS front-end, this repo houses the latter.
 
 Here is a link to our app in production: http://giveit.surge.sh/
 
@@ -39,7 +41,7 @@ I want to see the listing location on Google Maps
 
 ## Installing and running the app locally
 
-** 
+**
 Please note: if running the application locally, you must have a Google Maps API key set in `.env.local`. This is to prevent unauthorized use of our Google Maps API developer key. If you would like to provide your own key, store the key in `.env.local`, and name the key `REACT_APP_MAPS_API_KEY`. See the [React docs](https://facebook.github.io/create-react-app/docs/adding-custom-environment-variables) for more information.
 **
 

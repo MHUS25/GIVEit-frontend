@@ -1,6 +1,5 @@
-import React, {
-  Component
-} from 'react';
+/*global google*/
+import React, {Component} from 'react';
 import TableListings from './TableListings'
 import Map from './Map'
 import Navbar from './components/Navbar'
@@ -180,6 +179,12 @@ class App extends Component {
         }
       });
 
+      marker.addListener('click', () => {
+        if(marker.getAnimation() !==null) { marker.setAnimation(null); }
+        else { marker.setAnimation(google.maps.Animation.BOUNCE); }
+        setTimeout(() => { marker.setAnimation(null) }, 1500);
+      });
+
 
       marker.addListener('click', () => {
         infowindow.setContent(contentString);
@@ -192,13 +197,13 @@ class App extends Component {
 
     return (
       <div className = "app">
-        <SideBar handleSubmit = {this.handleSubmit} /> 
+        <SideBar handleSubmit = {this.handleSubmit} />
         <Navbar />
         <Map />
-        <TableListings 
+        <TableListings
           listings = {this.state.listings}
           removeList = {this.removeList}
-        /> 
+        />
         <Footer />
       </div>
     );

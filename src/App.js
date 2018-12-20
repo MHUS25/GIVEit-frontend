@@ -1,6 +1,4 @@
-import React, {
-  Component
-} from 'react';
+import React, { Component } from 'react';
 import Map from './Map'
 import Navbar from './components/Navbar'
 import SideBar from './components/SideBar'
@@ -182,7 +180,7 @@ class App extends Component {
 
       marker.addListener('click', () => {
         if(marker.getAnimation() !==null) { marker.setAnimation(null); }
-        else { marker.setAnimation(google.maps.Animation.BOUNCE); }
+        else { marker.setAnimation(window.google.maps.Animation.BOUNCE); }
         setTimeout(() => { marker.setAnimation(null) }, 1500);
       });
 

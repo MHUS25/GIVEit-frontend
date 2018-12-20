@@ -14,8 +14,9 @@ Our app has the following features:
  - Creating, showing, and deleting listings
  - Communicating with the GIVEit backend API via JSON, persisting the data in a database
  - Converting a listing address to a latitude/longitude pair via the Google Maps Geocoding API
- - Showing a marker on Google Maps using the Google Maps JavaScript API
+ - Showing a marker on Google Maps using the Google Maps JavaScript API (Red markers for need listings & Green markers for support listings)
  - Showing an info box on Google Maps using the Google Maps JavaScript API
+ - Search bar uses Places API to recenter the map
 
 ## Initial User Stories
 
@@ -31,9 +32,6 @@ So that I can find help on a map
 I want to see the listing location on Google Maps
 
 ```
-
-## User interaction diagram
-// TODO
 
 ## Our learning documentation
 - [Here](https://trello.com/b/fCE5cFQb/giveit) is our card wall for the project

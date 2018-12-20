@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import TableListings from './TableListings'
 import Map from './Map'
 import Navbar from './components/Navbar'
 import SideBar from './components/SideBar'

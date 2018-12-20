@@ -36,15 +36,32 @@ body {
   transition: color 0.8s;
 }
 
+.menu-2 .bm-item {
+  display: inline-block;
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: #d1d1d1;
+  transition: color 0.8s;
+}
+
 .bm-item:hover {
   color: black;
 }
 
-.bm-burger-button {
+.menu-1 .bm-burger-button {
   position: fixed;
   width: 60px;
   height: 60px;
   left: 10px;
+  top: 36px;
+  margin-top: 350px;
+}
+
+.menu-2 .bm-burger-button {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  right: 10px;
   top: 36px;
   margin-top: 350px;
 }

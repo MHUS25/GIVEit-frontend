@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { slide as Menu } from 'react-burger-menu';
 
+
 class FormListings extends Component {
   constructor(props) {
     super(props);
@@ -46,7 +47,8 @@ class FormListings extends Component {
     } = this.state;
 
     return (
-      <Menu customBurgerIcon={ <img src="./plus.png" alt="Add Post" /> }>
+    <div className='menu-1'>
+      <Menu customBurgerIcon={ <img src="./plus.png" alt="Add Post" /> } >
         <form>
           <label>Title</label>
           <input
@@ -134,6 +136,7 @@ class FormListings extends Component {
           />
         </form>
       </Menu>
+    </div>
     );
   }
 }
